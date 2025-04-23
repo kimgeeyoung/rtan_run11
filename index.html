@@ -14,15 +14,15 @@
     <style>
         /* body styling */
         body {
-            background-color: #f0f0f0;
+            background-color: red;
             /* 배경 색상 */
-            font-size: 16px;
+            font-size: 12px;
             /* 본문 폰트 크기 */
             line-height: 1.6;
             /* 본문 줄 높이 */
             margin: 0;
-            padding: 20px;
-            color: #333;
+            padding: 15px;
+            color: white;
             /* 본문 텍스트 색 */
         }
 
@@ -30,25 +30,25 @@
         canvas {
             display: block;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: green;
             /* 캔버스 배경 */
-            border: 1px solid #ccc;
+            border: 3px solid white;
             /* 캔버스 테두리 */
             border-radius: 12px;
             /* 캔버스 둥근 모서리 */
         }
 
         #subtitle {
-            font-size: 20px;
+            font-size: 15px;
             /* 부제목 폰트 크기 */
             text-align: center;
         }
 
         #score {
-            font-size: 40px;
+            font-size: 30px;
             /* 점수 폰트 크기 */
             text-align: center;
-            margin-top: 20px;
+            margin-top: 18px;
             font-weight: bold;
         }
     </style>
@@ -61,28 +61,28 @@
   -->
     <script>
         // 캔버스 크기
-        const CANVAS_WIDTH = 800;     // 캔버스 가로 크기
-        const CANVAS_HEIGHT = 500;    // 캔버스 세로 크기
+        const CANVAS_WIDTH = 900;     // 캔버스 가로 크기
+        const CANVAS_HEIGHT = 600;    // 캔버스 세로 크기
 
         // 배경 스크롤 속도
-        const BG_MOVING_SPEED = 3;
+        const BG_MOVING_SPEED = 7;
 
         // 러너(르탄이) 설정
-        const RUNNER_WIDTH = 100;
-        const RUNNER_HEIGHT = 100;
-        const RUNNER_START_X = 10;
+        const RUNNER_WIDTH = 120;
+        const RUNNER_HEIGHT = 120;
+        const RUNNER_START_X = 20;
         const RUNNER_START_Y = 400;
 
         // 점프 설정
-        const JUMP_SPEED = 3;         // 점프 시 Y값 변화량
+        const JUMP_SPEED = 5;         // 점프 시 Y값 변화량
         const MAX_JUMP_HEIGHT = 20;   // 최대 점프 고정 Y위치
 
         // 장애물 설정
-        const OBSTACLE_WIDTH = 50;
-        const OBSTACLE_HEIGHT = 50;
-        const OBSTACLE_FREQUENCY = 90; // 프레임마다 생성 빈도
-        const OBSTACLE_SPEED = 4;
-        const SCORE_PER_OBSTACLE = 10; // 장애물 당 점수
+        const OBSTACLE_WIDTH = 40;
+        const OBSTACLE_HEIGHT = 40;
+        const OBSTACLE_FREQUENCY = 50; // 프레임마다 생성 빈도
+        const OBSTACLE_SPEED = 6;
+        const SCORE_PER_OBSTACLE = 60; // 장애물 당 점수
         // 음원 및 이미지 경로 설정
         const ASSETS = {
             sounds: {
